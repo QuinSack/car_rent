@@ -1,0 +1,8 @@
+.slider__item{
+    max-width: 100%;
+    height: 650px;
+}
+
+.slider__item-01{
+    background: linear-gradient(rgb(0, 13, 107, 0.5));
+}
