@@ -8,6 +8,7 @@ import ServicesList from '../components/UI/ServicesList'
 import carData from '../assets/data/carData'
 import CarItem from '../components/UI/CarItem'
 import BecomeDriverSection from '../components/UI/BecomeDriverSection'
+import Testimonial from '../components/UI/Testimonial'
 
 
 const Home = () => {
@@ -58,6 +59,17 @@ const Home = () => {
         </Container>
       </section>
       <BecomeDriverSection />
+      <section>
+        <Container>
+          <Row>
+            <Col lg='12' className='mb-4 text-center'>
+              <h6 className='section__subtitle'>Reviews From</h6>
+              <h2 className='section__title'>Our Clients</h2>
+            </Col>
+            <Testimonial />
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   )
 }
