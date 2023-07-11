@@ -48,3 +48,28 @@
     text-decoration: none;
     font-weight: 600;
 }
+
+@media only screen and(max-width:992px){
+    .slider__item{
+        height: 530px;
+        width: 100%;
+    }
+
+    .slider__content{
+        margin-top: -70px;
+    }
+
+    .slider__content h1{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .slider__item{
+        height: 450px;
+    }
+
+    .slider__content h1{
+        font-size: 1.5rem;
+    }
+}
