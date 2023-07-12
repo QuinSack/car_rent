@@ -4,6 +4,7 @@ import ava01 from '../../assets/allimages/ava-1.jpg'
 import ava02 from '../../assets/allimages/ava-2.jpg'
 import ava03 from '../../assets/allimages/ava-3.jpg'
 import ava04 from '../../assets/allimages/ava-4.jpg'
+import '../../styles/testimonial.css'
  
 const Testimonial = () => {
     const settings = {
