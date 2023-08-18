@@ -1,0 +1,30 @@
+.commentscontainer{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.leavecomment{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 15px;
+}
+
+.nameemail{
+    display: flex;
+    gap: 70px;
+    margin-bottom: 20px;
+}
+
+.nameemail input{
+    width: 20%;
+    height: 50px;
+    border-radius: 23px;
+    padding-left: 10px;
+}
