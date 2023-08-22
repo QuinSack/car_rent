@@ -1,0 +1,46 @@
+.signupcontainer{
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSvV1jImKO1aTd69jrJp81sXO3Ty-zgTbgYAhtnK8PVuztO5SGu7WBS2Yp3uz8oreMazM&usqp=CAU");
+    background-size: contain;
+}
+
+.signupcontent{
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.signupcontent input{
+    width: 90%;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+.signupcontent button{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: lightgreen;
+    color: white;
+    transition: 0.5s;
+}
+
+.signupcontent button:hover{
+    transform: scale(1.10);
+}
+
+.signupinput{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
