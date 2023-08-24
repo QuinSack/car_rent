@@ -1,0 +1,23 @@
+.logincontainer{
+    width: 100vw;
+    height: 50vh;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: blueviolet;
+    width: 25%;
+    height: 65%;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginform input{
+    padding-left: 15px;
+}

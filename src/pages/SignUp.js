@@ -47,7 +47,7 @@ const SignUp = () => {
             </section>
             <button onClick={(e)=>handleSignup(e)}><strong>Create Account</strong></button>
         </form>
-        <button onClick={(e)=>handleSignout(e)}>Sign Out</button>
+        <button type='submit' onClick={(e)=>handleSignout(e)}>Sign Out</button>
     </div>
   )
 }
