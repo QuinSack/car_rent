@@ -8,6 +8,7 @@ import Comment from '../pages/Comment';
 import CommentDetails from '../pages/CommentDetails';
 import NotFound from '../pages/NotFound';
 import SignUp from '../pages/SignUp';
+import Login from '../pages/Login';
 
 const Routers = () => {
   return (
@@ -19,6 +20,7 @@ const Routers = () => {
         <Route path='/cardetails' element={<CarDetails />} />
         <Route path='/comments' element={<Comment />} />
         <Route path='/commentdetails' element={<CommentDetails />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='*' element={<NotFound />} />
     </Routes>
