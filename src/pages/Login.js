@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/login.css'
 import { auth } from '../configs/firebase';
-import {signInWithEmailAndPassword} from 'firebase/auth'
+import {signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -9,15 +9,29 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, you can redirect or update the UI accordingly
+                navigate("/home");
+                console.log(user.email);
+            } else {
+                console.log("No user is signed in at the moment");
+            }
+        });
+
+        return () => unsubscribe(); // Cleanup the listener when the component unmounts
+    }, []);
+
     const handleLogin = async (e) => {
         try{
             e.preventDefault();
             const submitLoginDetails = await signInWithEmailAndPassword(auth, email, password);
             console.log(submitLoginDetails);
+            // if(auth.currentUser.email.length > 0){
+            //     navigate("/home")
+            // };
             console.log(auth.currentUser.email);
-            if(auth.currentUser.email.length > 0){
-                navigate("/home")
-            }
         }catch(err){
             console.error(err);
         }
