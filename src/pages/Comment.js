@@ -1,12 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/comments.css'
 import { db } from '../configs/firebase';
-import {collection, addDoc} from 'firebase/firestore'
+import {collection, addDoc, getDocs} from 'firebase/firestore'
 
 const Comment = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [userComments, setUserComments] = useState([]);
+
+  const fetchComments = async() => {
+    try{
+      const commentref = collection(db, "comments")
+      const getComments = await getDocs(commentref);
+      const allComments = getComments.docs.map((doc) => ({...doc.data(), id: doc.id}))
+      setUserComments(allComments);
+      console.log(userComments);
+    }catch(err){
+      console.error(err);
+    }
+  }
+
+  useEffect(() => {
+    fetchComments();
+  },[]);
 
   const submitComment = async (e) => {
     e.preventDefault();
@@ -24,7 +41,15 @@ const Comment = () => {
   return (
     <div className='commentscontainer'>
       <section>
-        <h4>Customer Comments</h4>
+        <h4 style={{marginLeft: '40px'}}><strong>Customer Comments</strong></h4>
+        <div className='commentbodycontainer'>
+          {userComments.map((userComment) => (
+            <div className='commentbody'>
+              <h5>{userComment.name}</h5>
+              <p>{userComment.message}</p>
+            </div>
+          ))}
+        </div>
       </section>
       <section className='leavecomment'>
         <h3><strong>Leave a comment</strong></h3>
