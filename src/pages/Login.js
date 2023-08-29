@@ -1,21 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import '../styles/login.css'
 import { auth } from '../configs/firebase';
 import {signInWithEmailAndPassword, onAuthStateChanged} from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
+    const {isAuthenticated, setIsAuthenticated, handleSignIn} = useContext(AuthContext);
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                // User is signed in, you can redirect or update the UI accordingly
+                handleSignIn();
                 navigate("/home");
                 console.log(user.email);
             } else {
+                setIsAuthenticated(false);
                 console.log("No user is signed in at the moment");
             }
         });
