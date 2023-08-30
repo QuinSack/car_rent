@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -14,14 +14,14 @@ import Careers from '../pages/Careers';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 
 const Routers = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  //const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const {isAuthenticated} = useContext(AuthContext);
 
-  const handleSignIn = () => {
-    setIsAuthenticated(true);
-  }
+  // const handleSignIn = () => {
+  //   setIsAuthenticated(true);
+  // }
 
   return (
-    <AuthContext.Provider value={{isAuthenticated, setIsAuthenticated, handleSignIn}}>
       <Routes>
           <Route path='/' element={<Navigate to ='/home' />} />
           <Route path='/home' element={<Home />} />
@@ -36,7 +36,6 @@ const Routers = () => {
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />
       </Routes>
-    </AuthContext.Provider>
   )
 }
 
