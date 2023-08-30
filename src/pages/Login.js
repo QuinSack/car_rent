@@ -10,7 +10,7 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    const {isAuthenticated, setIsAuthenticated, handleSignIn} = useContext(AuthContext);
+    const {setIsAuthenticated, handleSignIn} = useContext(AuthContext);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {

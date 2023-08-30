@@ -23,6 +23,10 @@ const navLinks = [
     {
         path: '/contact',
         display: 'Contact'
+    },
+    {
+        path: '/careers',
+        display: 'Careers'
     }
 ]
 

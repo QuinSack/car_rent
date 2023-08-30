@@ -10,6 +10,8 @@ import NotFound from '../pages/NotFound';
 import SignUp from '../pages/SignUp';
 import Login from '../pages/Login';
 import { AuthContext } from '../context/AuthContext';
+import Careers from '../pages/Careers';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 
 const Routers = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,6 +30,8 @@ const Routers = () => {
           <Route path='/cardetails' element={isAuthenticated ? <CarDetails /> : <Navigate to="/login" />} />
           <Route path='/comments' element={isAuthenticated ? <Comment /> : <Navigate to="/login" />} />
           <Route path='/commentdetails' element={isAuthenticated ? <CommentDetails /> : <Navigate to="/login" />} />
+          <Route path='/careers' element={<Careers />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />
