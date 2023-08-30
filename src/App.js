@@ -1,10 +1,18 @@
+import { useState } from "react";
 import Layout from "./components/Layout/Layout";
+import { AuthContext } from "./context/AuthContext";
 
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const handleSignIn = () => {
+    setIsAuthenticated(true);
+  }
   return (
     <div>
-      <Layout />
+      <AuthContext.Provider value={{isAuthenticated, setIsAuthenticated, handleSignIn}}>
+        <Layout />
+      </AuthContext.Provider>
     </div>
   );
 }

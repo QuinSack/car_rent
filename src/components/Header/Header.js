@@ -1,7 +1,10 @@
-import React,{useRef} from 'react'
+import React,{useContext, useRef} from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { Link, NavLink } from 'react-router-dom'
 import '../../styles/header.css'
+import { AuthContext } from '../../context/AuthContext'
+import { auth } from '../../configs/firebase'
+import { signOut} from 'firebase/auth'
 
 const navLinks = [
     {
@@ -32,7 +35,20 @@ const navLinks = [
 
 const Header = () => {
     const menuRef = useRef(null)
+
+    const {isAuthenticated, setIsAuthenticated} = useContext(AuthContext);
+
     const toggleMenu = () => menuRef.current.classList.toggle('menu__active')
+
+    const handleSignOut = async() => {
+        try{
+            const signUserOut = await signOut(auth);
+            setIsAuthenticated(false);
+            console.log(signUserOut);
+          }catch(err){
+            console.error(err);
+          }
+    }
   return (
     <header className='header'>
         <div className='header__top'>
@@ -47,10 +63,19 @@ const Header = () => {
                         </div>
                     </Col>
                     <Col lg='6' md='6' sm='6'>
-                        <div className='header__top__right d-flex align-items-center justify-content-end gap-3'>
-                            <Link to='/login' className='d-flex align-items-center gap-1'><i class="ri-login-circle-line"></i>Login</Link>
-                            <Link to='/signup' className='d-flex align-items-center gap-1'><i class="ri-user-line"></i>Register</Link>
-                        </div>
+                        {
+                            isAuthenticated ? (
+                                <div className='header__top__right d-flex align-items-center justify-content-end gap-3'>
+                                    <h6 onClick={handleSignOut}>Sign Out</h6>
+                                </div>
+                            ) : (
+                                <div className='header__top__right d-flex align-items-center justify-content-end gap-3'>
+                                    <Link to='/login' className='d-flex align-items-center gap-1'><i class="ri-login-circle-line"></i>Login</Link>
+                                    <Link to='/signup' className='d-flex align-items-center gap-1'><i class="ri-user-line"></i>Register</Link>
+                                </div>
+                            )
+                        }
+                        
                     </Col>
                 </Row>
             </Container>
