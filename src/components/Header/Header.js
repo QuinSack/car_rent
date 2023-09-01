@@ -5,6 +5,7 @@ import '../../styles/header.css'
 import { AuthContext } from '../../context/AuthContext'
 import { auth } from '../../configs/firebase'
 import { signOut} from 'firebase/auth'
+import {setAuthStatusInLocalStorage} from '../../utils/AuthStorage'
 
 const navLinks = [
     {
@@ -44,6 +45,7 @@ const Header = () => {
         try{
             const signUserOut = await signOut(auth);
             setIsAuthenticated(false);
+            setAuthStatusInLocalStorage(false);
             console.log(signUserOut);
           }catch(err){
             console.error(err);
