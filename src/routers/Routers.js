@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -12,14 +12,18 @@ import Login from '../pages/Login';
 import { AuthContext } from '../context/AuthContext';
 import Careers from '../pages/Careers';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
+import {setAuthStatusInLocalStorage, getAuthStatusFromLocalStorage} from '../utils/AuthStorage'
 
 const Routers = () => {
-  //const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const {isAuthenticated} = useContext(AuthContext);
 
-  // const handleSignIn = () => {
-  //   setIsAuthenticated(true);
-  // }
+  const {isAuthenticated, setIsAuthenticated} = useContext(AuthContext);
+
+  useEffect(() => {
+    const storedAuthStatus = getAuthStatusFromLocalStorage();
+    if (storedAuthStatus !== null) {
+      setIsAuthenticated(storedAuthStatus);
+    }
+  }, [setIsAuthenticated]);
 
   return (
       <Routes>
