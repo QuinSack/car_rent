@@ -1,10 +1,22 @@
-import React from 'react'
-import { Col } from 'reactstrap'
+import React, { useState } from 'react'
+import { Col, Modal, ModalBody, ModalHeader } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import '../../styles/caritem.css'
 
+
 const CarItem = (props) => {
-    const {imgUrl, model, carName, automatic, speed, price} = props.item
+    const {imgUrl, model, carName, automatic, speed, price} = props.item;
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+      };
+
+      const closeModal = () => {
+        setIsModalOpen(false);
+      };
+    
+
   return (
     <Col lg='4' md='4' sm='6' className='mb-5'>
         <div className='car__item'>
@@ -22,10 +34,20 @@ const CarItem = (props) => {
                 <button className='w-50 car__item-btn car__btn-rent'>
                     <Link to={`/cars/${carName}`}>Rent</Link>
                 </button>
-                <button className='w-50 car__item-btn car__btn-details'>
-                    <Link to={`/cars/${carName}`}>Details</Link>
+                <button className='w-50 car__item-btn car__btn-details' onClick={openModal}>
+                Details
                 </button>
             </div>
+            {isModalOpen && (
+                <Modal isOpen={isModalOpen} toggle={closeModal}>
+                    <ModalHeader toggle={closeModal}>Car Details</ModalHeader>
+                    <ModalBody>
+                        <h5>Car Name: {carName}</h5>
+                        <h5>Rent Cost per Day: {price}</h5>
+                        <h5>Top Speed: {speed}</h5>
+                    </ModalBody>
+                </Modal>
+      )}
         </div>
     </Col>
   )
