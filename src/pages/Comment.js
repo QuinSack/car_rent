@@ -41,7 +41,7 @@ const Comment = () => {
   return (
     <div className='commentscontainer'>
       <section>
-        <h4 style={{marginLeft: '40px'}}><strong>Customer Comments</strong></h4>
+        <h4 style={{marginLeft: '40px'}}><strong>What Our Clients Are Saying</strong></h4>
         <div className='commentbodycontainer'>
           {userComments.map((userComment) => (
             <div className='commentbody'>

@@ -25,12 +25,16 @@ const navLinks = [
         display: 'Comments'
     },
     {
-        path: '/contact',
-        display: 'Contact'
+        path: '/contact-us',
+        display: 'Contact Us'
     },
     {
         path: '/careers',
         display: 'Careers'
+    },
+    {
+        path: '/faqs',
+        display: 'FAQs'
     }
 ]
 
