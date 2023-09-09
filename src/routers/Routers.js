@@ -13,6 +13,8 @@ import { AuthContext } from '../context/AuthContext';
 import Careers from '../pages/Careers';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import {setAuthStatusInLocalStorage, getAuthStatusFromLocalStorage} from '../utils/AuthStorage'
+import FAQ from '../pages/FAQ';
+import ContactUs from '../pages/ContactUs';
 
 const Routers = () => {
 
@@ -34,8 +36,10 @@ const Routers = () => {
           <Route path='/cardetails' element={isAuthenticated ? <CarDetails /> : <Navigate to="/login" />} />
           <Route path='/comments' element={isAuthenticated ? <Comment /> : <Navigate to="/login" />} />
           <Route path='/commentdetails' element={isAuthenticated ? <CommentDetails /> : <Navigate to="/login" />} />
+          <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/careers' element={<Careers />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/faqs' element={<FAQ />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />
