@@ -4,12 +4,12 @@ import '../styles/privacypolicy.css'
 const PrivacyPolicy = () => {
   return (
     <div className='privacy-policy-container'>
-      <h1>Privacy Policy for QuinSack Rentals</h1>
+      <h1>Privacy Policy for QuinSack Car Rentals</h1>
       <p>
         Effective Date: 30/08/2023
       </p>
       <p>
-        At QuinSack Rentals, we are committed to protecting the privacy and security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our website and services. By accessing or using our website and services, you consent to the practices described in this Privacy Policy.
+        At QuinSack Car Rentals, we are committed to protecting the privacy and security of your personal information. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you use our website and services. By accessing or using our website and services, you consent to the practices described in this Privacy Policy.
       </p>
       <h4>Information We Collect</h4>
       <p>
