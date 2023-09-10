@@ -20,13 +20,3 @@ function App() {
 }
 
 export default App;
-
-
-// {authState ? (
-//   <>
-//     <Route path="/cars" element={<CarListing />} />
-//     <Route path="/comments" element={<Comment />} />
-//   </>
-// ) : (
-//   <Route path="/cars" element={<Navigate to="/login" replace />} />
-// )}
