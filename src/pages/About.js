@@ -15,30 +15,30 @@ const About = () => {
         <img src={rain} style={{width: '100%', height: '100%', objectFit: 'fill'}} />
       </section>
       <section className='whoweare'>
-        <h3 style={{fontSize: '5rem', color: '#f9a826'}}><strong>Who We Are</strong></h3>
+        <h3><strong>Who We Are</strong></h3>
         <h5>Welcome to Quinsack Rentals, your trusted online car rental platform. At Quinsack Rentals, we believe that renting a car should be easy, convenient, and enjoyable. We strive to provide you with a seamless and personalized car rental experience that puts you in the driver's seat of your journey.</h5>
       </section>
       <section>
-        <Row>
-          <Col style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '50px'}}>
-            <h5 style={{fontSize: '3rem', color: '#f9a826'}}><strong>Our Journey From</strong></h5>
-            <h5 style={{fontSize: '3rem', color: '#f9a826'}}><strong>Vision to Reality</strong></h5>
+        <Row className='oj'>
+          <Col className='ourjourney'>
+            <h5><strong>Our Journey From</strong></h5>
+            <h5><strong>Vision to Reality</strong></h5>
             <p>
             Discover the story behind QuinSack Car Rentals, how it all started, and the vision that drives us forward. We are a team of passionate individuals who saw an opportunity to revolutionize the car rental industry by combining innovative technology with exceptional service. Learn more about our mission to transform the way people rent cars and the milestones we've achieved along the way.
             </p>
           </Col>
-          <Col style={{display: 'flex', justifyContent: 'center'}}>
+          <Col className='ourjourneyimage'>
             <img src={carpark} alt='' style={{width: '100%', height: '100%', objectFit: 'fill'}} />
           </Col>
         </Row>
       </section>
       <section>
-        <Row>
-          <Col style={{display: 'flex', justifyContent: 'center'}}>
+        <Row className='oc'>
+          <Col className='ourcommitmentimage'>
             <img src={cardealer} alt='' style={{width: '100%', height: '100%', objectFit: 'fill'}} />
           </Col>
-          <Col style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-            <h5 style={{fontSize: '3rem', color: '#f9a826'}}><strong>Our Commitment to You</strong></h5>
+          <Col className='ourcommitment'>
+            <h5><strong>Our Commitment to You</strong></h5>
             <p>
             At QuinSack Car Rentals, our values guide everything we do. We are committed to providing outstanding customer service, fostering trust and transparency and disrupting the car rental industry by embracing innovation. Find out how these core values shape our business practices and ensure that you receive the highest level of service and satisfaction
             </p>

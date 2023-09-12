@@ -14,3 +14,101 @@
 .whoweare{
     text-align: center;
 }
+
+.whoweare h3{
+    font-size: 5rem;
+    color: #f9a826
+}
+
+.ourjourney{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 50px
+}
+
+.ourjourney h5{
+    font-size: 3rem;
+    color: #f9a826
+}
+
+.ourjourneyimage{
+    display: flex;
+    justify-content: center
+}
+
+.ourcommitmentimage{
+    display: flex; 
+    justify-content: center
+}
+
+.ourcommitment{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column
+}
+
+.ourcommitment h5{
+    font-size: 3rem; 
+    color: #f9a826
+}
+
+@media only screen and (max-width:315px){
+    .aboutimage{
+        display: none;
+    }
+
+    .whoweare h3{
+        font-size: 2rem;
+        color: #f9a826
+    }
+
+    .whoweare h5{
+        font-size: 1rem;
+    }
+
+    .oj{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ourjourney{
+        display: 'flex';
+        justify-content: 'center';
+        width: 100vw;
+        padding: 0;
+    }
+
+    .ourjourney h5{
+        font-size: 1.5rem;
+        color: #f9a826
+    }
+
+    .ourjourney p{
+        font-size: 1rem;
+    }
+
+    .ourjourneyimage{
+        width: 0vw;
+    }
+
+    .ourjourneyimage img{
+        display: none;
+    }
+
+    .ourcommitment h5{
+        font-size: 1.5rem; 
+        color: #f9a826
+    }
+
+    .ourcommitmentimage img{
+        display: none;
+    }
+
+    .oc{
+        display: flex;
+        flex-direction: column;
+    }
+}
