@@ -35,7 +35,7 @@ const Login = () => {
             // if(auth.currentUser.email.length > 0){
             //     navigate("/home")
             // };
-            console.log(auth.currentUser.email);
+            console.log("Logged in user: " + auth.currentUser.email);
         }catch(err){
             console.error(err);
         }
