@@ -17,12 +17,16 @@ const quickLinks = [
     display: 'Car Listing'
   },
   {
-    path: '/contact',
+    path: '/contact-us',
     display: 'Contact'
   },
   {
     path: '/comments',
     display: 'Comments'
+  },
+  {
+    path: '/eligibility-requirements',
+    display: 'Eligibility Requirements'
   }
 ]
 
@@ -35,7 +39,7 @@ const Footer = () => {
         <Row>
           <Col lg='4' md='4' sm='12'>
             <div className='logo footer__logo'><h1><Link to='/home' className='d-flex align-items-center gap-3'><i class="ri-car-line"></i><span>Rent Car <br /> Service</span></Link></h1></div>
-            <p className='footer__logo-content'>Lorem ipsum dolor sit amet, temporibus complectitur et vim, per nominati euripidis ullamcorper ea, an omnis feugait delicatissimi eum. Pri brute utroque senserit ea. Cu quo saperet fastidii tincidunt. Prima convenire has at. Has quem aliquam et, pro nullam libris vituperatoribus et.</p>
+            <p className='footer__logo-content'>QuinSack Car Rentals is your trusted online car rental platform. We provide you with a seamless and personalised car rental experience that puts you in the driver's seat of your journey.</p>
           </Col>
           <Col lg='2' md='4' sm='6'>
             <div className='mb-4'>
@@ -54,7 +58,7 @@ const Footer = () => {
               <h5 className='footer__link-title mb-4'>Head Office</h5>
               <p className='office__info'>113 Airport West, Dzorwulu, Accra-Ghana</p>
               <p className='office__info'>Phone: 0300256342</p>
-              <p className='office__info'>Email: eddywhillsrentals@gmail.com</p>
+              <p className='office__info'>Email: quinsackrentals@gmail.com</p>
               <p className='office__info'>Working Hours: 9am - 7pm</p>
             </div>
           </Col>

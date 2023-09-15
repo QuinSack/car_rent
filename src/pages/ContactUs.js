@@ -55,7 +55,7 @@ const ContactUs = () => {
                     </div>
                     <div style={{display: 'flex', gap: '20px'}}>
                         <FontAwesomeIcon icon={faEnvelope} style={{color: '#f9a826'}}></FontAwesomeIcon>
-                        <p>eddywhillsrentalssupport@gmail.com</p>
+                        <p>quinsackrentalssupport@gmail.com</p>
                     </div>
                 </div>
                 <h4 style={{fontSize: '2rem', color: '#f9a826', marginTop: '20px'}}><strong>Operating Hours</strong></h4>

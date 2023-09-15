@@ -1,0 +1,31 @@
+.eligibilitycontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 30px;
+}
+
+.eligibility1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.eligibility1 h5{
+    margin-bottom: 30px;
+    color: #f9a826;
+} 
+
+.eligibility2{
+    margin-bottom: 40px;
+}
+
+.eligibility2 h5{
+    margin-bottom: 30px;
+    color: #f9a826;
+}
+
+.eligibility3 h5{
+    margin-bottom: 30px;
+    color: #f9a826;
+}
