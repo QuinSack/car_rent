@@ -15,6 +15,7 @@ import PrivacyPolicy from '../pages/PrivacyPolicy';
 import {setAuthStatusInLocalStorage, getAuthStatusFromLocalStorage} from '../utils/AuthStorage'
 import FAQ from '../pages/FAQ';
 import ContactUs from '../pages/ContactUs';
+import EligibilityRequirements from '../pages/EligibilityRequirements';
 
 const Routers = () => {
 
@@ -40,6 +41,7 @@ const Routers = () => {
           <Route path='/careers' element={<Careers />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/faqs' element={<FAQ />} />
+          <Route path='/eligibility-requirements' element={<EligibilityRequirements />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />
