@@ -1,0 +1,54 @@
+.careerscontainer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 30px;
+}
+
+.hiring{
+    width: 10%;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.hiring p{
+    color: #000d6b;
+}
+
+.joinus{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #000d6b;
+    margin-bottom: 30px;
+}
+
+.joinus h1{
+    color: #f9a826;
+}
+
+.roles{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-bottom: 1px solid;
+    padding: 10px;
+}
+
+.roles h5{
+    color: #000d6b;
+}
+
+.roles button{
+    width: 10%;
+    padding: 5px;
+    background-color: #000d6b;
+    color: white;
+}
