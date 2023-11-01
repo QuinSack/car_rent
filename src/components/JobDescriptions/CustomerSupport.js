@@ -4,11 +4,11 @@ import '../../styles/jobapplication.css'
 const CustomerSupport = () => {
   return (
     <div className='jobapp'>
-        <b>Company Overview:</b>
+        <b className='subhead'>Company Overview:</b>
         QuinSack Car Rentals is a customer-centric rental service company dedicated to delivering exceptional products/services and ensuring a positive customer experience. We are currently seeking a highly motivated and empathetic Customer Support Specialist to join our dynamic team and help us uphold our commitment to customer satisfaction.
-        <b>Position Overview:</b>
+        <b className='subhead'>Position Overview:</b>
         As a Customer Support Specialist, you will play a crucial role in ensuring our customers receive outstanding support and assistance. You will be the primary point of contact for customer inquiries, providing timely and accurate solutions while maintaining a professional and positive demeanor.
-        <b>Key Responsibilities</b>
+        <b className='subhead'>Key Responsibilities</b>
         <b>- Customer Interaction:</b>
         Respond promptly to customer inquiries via various channels, including phone, email, and live chat.
         Provide accurate information about products/services, pricing, and policies.
@@ -29,19 +29,19 @@ const CustomerSupport = () => {
         Monitor and evaluate customer interactions to ensure a high standard of service.
         Provide feedback to improve customer support processes and procedures.
         Identify trends in customer issues and collaborate with the team to implement solutions.
-        <b>Qualifications:</b>
+        <b className='subhead'>Qualifications:</b>
         Proven experience in customer support or a related role.
         Excellent communication skills, both written and verbal.
         Strong problem-solving and critical-thinking abilities.
         Empathetic and patient attitude toward customers.
         Familiarity with customer support software and ticketing systems.
         Ability to work in a fast-paced and collaborative environment.
-        <b>Benefits:</b>
+        <b className='subhead'>Benefits:</b>
         Competitive salary and performance-based bonuses.
         Comprehensive health and wellness benefits.
         Opportunities for professional development and training.
         Friendly and inclusive work environment.
-        <b>How to Apply:</b>
+        <b className='subhead'>How to Apply:</b>
         Please submit your resume and a cover letter explaining why you are a suitable candidate for the Customer Support Specialist position to hrquinsackrentals@gmail.com.
     </div>
   )
