@@ -4,11 +4,11 @@ import '../../styles/jobapplication.css'
 const FleetManager = () => {
   return (
     <div className='jobapp'>
-        <b>Company Overview:</b>
+        <b className='subhead'>Company Overview:</b>
         QuinSack Car Rentals is a leading rental service company that takes pride in delivering exceptional [transportation/logistics] solutions to our clients. With a commitment to efficiency, safety, and innovation, we are seeking a skilled and experienced Fleet Manager to oversee and optimize our fleet operations.
-        <b>Position Overview:</b>
+        <b className='subhead'>Position Overview:</b>
         As the Fleet Manager, you will be responsible for the strategic management and day-to-day operations of our vehicle fleet. This role requires a dynamic individual with a proven track record in fleet management, strong leadership skills, and a commitment to ensuring the highest standards of safety and performance.
-        <b>Key Responsibilities</b>
+        <b className='subhead'>Key Responsibilities</b>
         <b>- Fleet Operations:</b>
         Oversee the maintenance, scheduling, and dispatching of the company's fleet of vehicles.
         Develop and implement efficient fleet management policies and procedures.
@@ -28,19 +28,19 @@ const FleetManager = () => {
         Implement and enforce safety policies and procedures to ensure a secure working environment.
         Conduct regular safety audits and inspections.
         Collaborate with regulatory authorities to ensure compliance with industry standards.
-        <b>Qualifications:</b>
+        <b className='subhead'>Qualifications:</b>
         Bachelor's degree in Business, Logistics, or a related field.
         Proven experience in fleet management, preferably in the transport sector.
         Strong leadership and team management skills.
         In-depth knowledge of fleet operations, maintenance, and safety standards.
         Excellent communication and problem-solving skills.
         Proficient in the use of fleet management software.
-        <b>Benefits:</b>
+        <b className='subhead'>Benefits:</b>
         Competitive salary and performance-based bonuses.
         Comprehensive health and retirement benefits.
         Opportunities for professional development and advancement.
         Employee discounts and wellness programs.
-        <b>How to Apply:</b>
+        <b className='subhead'>How to Apply:</b>
         Please submit your resume and a cover letter detailing your relevant experience and qualifications to hrquinsackrentals@gmail.com.
     </div>
   )

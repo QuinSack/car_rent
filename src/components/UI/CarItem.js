@@ -32,7 +32,7 @@ const CarItem = (props) => {
                     <span className='d-flex align-items-center gap-1'><i class="ri-timer-flash-line"></i>{speed}</span>
                 </div>
                 <button className='w-50 car__item-btn car__btn-rent'>
-                    <Link to={`/cars/${carName}`}>Rent</Link>
+                    <Link to={`/cars/${carName}?imgUrl=${imgUrl}&model=${model}&carName=${carName}$automatic=${automatic}&speed=${speed}&price=${price}`}>Rent</Link>
                 </button>
                 <button className='w-50 car__item-btn car__btn-details' onClick={openModal}>
                 Details
