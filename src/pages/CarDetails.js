@@ -43,15 +43,15 @@ const CarDetails = () => {
         </div>
         <div className='pickup'>
           <div className='pickupblock'>
-            <h6>Location</h6>
+            <h6><b>Location</b></h6>
             <h6>Greater Accra</h6>
           </div>
           <div className='pickupblock'>
-            <h6>Pick-up</h6>
+            <h6><b>Pick-up</b></h6>
             <input type='datetime-local' value={pickupDate} onChange={(e)=>setPickupDate(e.target.value)} />
           </div>
           <div className='pickupblocklast'>
-            <h6>Drop-off</h6>
+            <h6><b>Drop-off</b></h6>
             <input type='datetime-local' value={dropoffDate} onChange={handleDropoffDateChange} min={pickupDate} />
           </div>
         </div>
