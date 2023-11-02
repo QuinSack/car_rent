@@ -16,7 +16,6 @@ import {setAuthStatusInLocalStorage, getAuthStatusFromLocalStorage} from '../uti
 import FAQ from '../pages/FAQ';
 import ContactUs from '../pages/ContactUs';
 import EligibilityRequirements from '../pages/EligibilityRequirements';
-import BookCar from '../pages/BookCar';
 
 const Routers = () => {
 
@@ -35,7 +34,7 @@ const Routers = () => {
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/cars' element={isAuthenticated ? <CarListing /> : <Navigate to="/login" />} />
-          <Route path='/cars/:carName' element={isAuthenticated ? <CarDetails /> : <Navigate to="/login" />} />
+          <Route path='/cars/:id' element={isAuthenticated ? <CarDetails /> : <Navigate to="/login" />} />
           <Route path='/comments' element={isAuthenticated ? <Comment /> : <Navigate to="/login" />} />
           <Route path='/commentdetails' element={isAuthenticated ? <CommentDetails /> : <Navigate to="/login" />} />
           <Route path='/contact-us' element={<ContactUs />} />
@@ -43,7 +42,6 @@ const Routers = () => {
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/faqs' element={<FAQ />} />
           <Route path='/eligibility-requirements' element={<EligibilityRequirements />} />
-          <Route path='/book' element={<BookCar />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='*' element={<NotFound />} />
