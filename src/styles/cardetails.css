@@ -1,4 +1,58 @@
 .cardetailscontainer{
     display: flex;
     width: 100vw;
+    height: 500px;
+    background-color: whitesmoke;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.carinfo{
+    width: 62%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.carbooking{
+    background-color: white;
+    width: 22%;
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pickup{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.pickupblock{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.pickupblock input{
+    border: none;
+}
+
+.pickupblocklast{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 0;
+}
+
+.pickupblocklast input{
+    border: none;
 }
