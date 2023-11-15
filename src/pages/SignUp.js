@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/signup.css'
 import { auth } from '../configs/firebase';
-import {createUserWithEmailAndPassword, signOut} from 'firebase/auth'
+import {createUserWithEmailAndPassword} from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
@@ -23,15 +23,15 @@ const SignUp = () => {
       }
     }
 
-    const handleSignout = async (e) => {
-      try{
-        e.preventDefault();
-        const signUserOut = await signOut(auth);
-        console.log(signUserOut);
-      }catch(err){
-        console.error(err);
-      }
-    }
+    // const handleSignout = async (e) => {
+    //   try{
+    //     e.preventDefault();
+    //     const signUserOut = await signOut(auth);
+    //     console.log(signUserOut);
+    //   }catch(err){
+    //     console.error(err);
+    //   }
+    // }
 
     console.log(currentUser);
 
@@ -47,7 +47,7 @@ const SignUp = () => {
             </section>
             <button onClick={(e)=>handleSignup(e)}><strong>Create Account</strong></button>
         </form>
-        <button type='submit' onClick={(e)=>handleSignout(e)}>Sign Out</button>
+        {/* <button type='submit' onClick={(e)=>handleSignout(e)}>Sign Out</button> */}
     </div>
   )
 }
