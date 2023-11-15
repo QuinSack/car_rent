@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../styles/cardetails.css';
 import carData from '../assets/data/carData';
+import {collection, addDoc} from 'firebase/firestore'
+import { db } from '../configs/firebase';
 
 const getCurrentDate = () => {
   const now = new Date();
@@ -40,6 +42,21 @@ const CarDetails = () => {
 
     return selectedTime >= validStartTime && selectedTime <= validEndTime;
   };
+
+  const handleBookingData = async (e) => {
+    e.preventDefault();
+    let rentlistcollection = collection(db, "booking_info");
+    try{
+        var submitBookingData = await addDoc(rentlistcollection, {carId: carInfo.id, carName: carInfo.carName, pickupDate, dropoffDate, totalCost})
+        console.log(submitBookingData);
+        setPickupDate("");
+        setDropoffDate("");
+        alert("Car booked successfully!")
+    }catch(err){
+        console.error("Error submitting booking data: ", err);
+        alert("Error submitting booking data. Please try again!")
+    }
+}
 
   const pickupDateObject = new Date(pickupDate);
   const dropoffDateObject = new Date(dropoffDate);
@@ -98,7 +115,7 @@ const CarDetails = () => {
           </h6>
         </div>
         <div>
-          <button style={{ borderRadius: '15px', padding: '1px', width: '30%' }}>Book Now</button>
+          <button type='submit' style={{ borderRadius: '15px', padding: '1px', width: '30%' }} onClick={(e) => handleBookingData(e)}>Book Now</button>
         </div>
       </div>
     </div>
