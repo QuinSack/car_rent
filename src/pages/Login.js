@@ -10,6 +10,7 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
     const { setIsAuthenticated, handleSignIn } = useContext(AuthContext);
@@ -37,6 +38,8 @@ const Login = () => {
             const submitLoginDetails = await signInWithEmailAndPassword(auth, email, password);
             console.log(submitLoginDetails);
 
+            // Uncomment the next line if you want to redirect on successful login
+            // navigate("/home");
             console.log("Logged in user: " + auth.currentUser.email);
 
         } catch (error) {
@@ -56,9 +59,22 @@ const Login = () => {
             <form className='loginform'>
                 <h3><strong>WELCOME!</strong></h3>
                 <input type='email' placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                <input type='password' placeholder='Enter your password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                <div style={{ position: 'relative' }}>
+                    <input
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder='Enter your password'
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <i
+                        onClick={() => setShowPassword(!showPassword)}
+                        style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', cursor: 'pointer' }}
+                    >
+                        {showPassword ? '👁️' : '👁️‍🗨️'}
+                    </i>
+                </div>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
-                <button type='submit' style={{ padding: '10px' }} onClick={(e) => handleLogin(e)}><strong>Sign In</strong></button>
+                <button type='submit' style={{ padding: '5px', width: '30%', borderRadius: '20px' }} onClick={(e) => handleLogin(e)}><strong>Sign In</strong></button>
                 {loading && <p>Signing you in...</p>}
             </form>
         </div>
