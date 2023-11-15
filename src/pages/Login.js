@@ -37,8 +37,6 @@ const Login = () => {
             const submitLoginDetails = await signInWithEmailAndPassword(auth, email, password);
             console.log(submitLoginDetails);
 
-            // Uncomment the next line if you want to redirect on successful login
-            // navigate("/home");
             console.log("Logged in user: " + auth.currentUser.email);
 
         } catch (error) {
