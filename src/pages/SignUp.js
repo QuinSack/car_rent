@@ -23,16 +23,6 @@ const SignUp = () => {
       }
     }
 
-    // const handleSignout = async (e) => {
-    //   try{
-    //     e.preventDefault();
-    //     const signUserOut = await signOut(auth);
-    //     console.log(signUserOut);
-    //   }catch(err){
-    //     console.error(err);
-    //   }
-    // }
-
     console.log(currentUser);
 
   return (
@@ -47,7 +37,6 @@ const SignUp = () => {
             </section>
             <button onClick={(e)=>handleSignup(e)}><strong>Create Account</strong></button>
         </form>
-        {/* <button type='submit' onClick={(e)=>handleSignout(e)}>Sign Out</button> */}
     </div>
   )
 }
