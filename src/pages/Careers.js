@@ -60,9 +60,10 @@ const Careers = () => {
         </div>
         <div className='joinus'>
           <h1><b>Be part of our mission</b></h1>
+          <p>Thanks for checking out our job openings. See something that interests you? Apply here.</p>
           <p>We're looking for passionate people to join us on our mission. We value flat hierarchies, clear communication, and full ownership and responsibility.</p>
         </div>
-        <h1 style={{color: '#f9a826'}}><strong>Available Positions</strong></h1>
+        <h1 style={{color: '#f9a826'}}><strong>Current Openings</strong></h1>
         {openRoles.map((openRole) => (
           <div className='roles'>
             <h5><strong>{openRole.title}</strong></h5>
